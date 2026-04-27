@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Everlast Scales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">Everlast</div>
+
+    <nav class="nav" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="solutions.html" class="active">Solutions</a>
+        <a href="#">Services</a>
+        <a href="#">Resources</a>
+        <a href="#">About Us</a>
+    </nav>
+
+    <button class="cta-btn">Request a Quote</button>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- Page Header -->
+<section class="page-hero">
+    <h1>Our Weighing Solutions</h1>
+    <p>Explore our range of precision weighing equipment for every industry.</p>
+</section>
+
+<!-- Main Layout -->
+<section class="solutions-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li onclick="filterProducts('all')">All</li>
+            <li onclick="filterProducts('analytical')">Analytical Balances</li>
+            <li onclick="filterProducts('platform')">Platform Scales</li>
+            <li onclick="filterProducts('price')">Price Computing</li>
+            <li onclick="filterProducts('hanging')">Hanging Scales</li>
+            <li onclick="filterProducts('axle')">Axle Weighing</li>
+            <li onclick="filterProducts('floor')">Floor Scales</li>
+            <li onclick="filterProducts('animal')">Animal Scales</li>
+            <li onclick="filterProducts('bridge')">Weighbridges</li>
+        </ul>
+    </aside>
+
+    <!-- Products -->
+    <div class="product-grid">
+
+        <!-- Product Card -->
+        <div class="product" data-category="analytical">
+            <div class="img-placeholder"></div>
+            <h4>Analytical Balance X200</h4>
+            <p>Capacity: 200g | Readability: 0.001g</p>
+           <button onclick="sendToWhatsApp('Analytical Balance X200')">Enquire Now</button>
+        </div>
+
+        <div class="product" data-category="platform">
+            <div class="img-placeholder"></div>
+            <h4>Platform Scale A12 500kg</h4>
+            <p>Capacity: 500kg</p>
+            <button onclick="sendToWhatsApp('Platform Scale A12 500Kg')">Enquire Now</button>
+        </div>
+
+        <div class="product" data-category="price">
+            <div class="img-placeholder"></div>
+            <h4>Price Computing Scale</h4>
+            <p>Integrated pricing display</p>
+            <button onclick="sendToWhatsApp('Price Computing Scale')">Enquire Now</button>
+        </div>
+
+        <div class="product" data-category="axle">
+            <div class="img-placeholder"></div>
+            <h4>Axle Weighing System</h4>
+            <p>Heavy-duty truck weighing</p>
+            <button onclick="sendToWhatsApp('Axle Weighing')">Enquire Now</button>
+        </div>
+        
+        <div class="product" 
+     onclick="openModal(this)"
+     data-name="Axle Weighing System"
+     data-specs="Capacity: 40 Tons | Portable | High Accuracy"
+     data-description="Designed for heavy-duty truck axle weighing with reliable precision. Ideal for logistics and transport companies.">
+
+    <div class="img-placeholder"></div>
+    <h4>Axle Weighing System</h4>
+    <p>Heavy-duty truck weighing</p>
+</div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Ready to secure your profits?</h2>
+    <button>Request a Quote</button>
+</section>
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+        <p id="modalSpecs"></p>
+        <p id="modalDescription"></p>
+
+        <!-- WhatsApp -->
+        <button id="modalBtn">💬 Enquire on WhatsApp</button>
+
+        <hr>
+
+        <!-- Get Quote Form -->
+        <h3>Request a Quote</h3>
+
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email Address">
+
+        <textarea id="details" placeholder="Additional details (optional)"></textarea>
+
+        <button onclick="submitQuote()">📩 Get Quote</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-columns">
+
+        <div>
+            <h4>About</h4>
+            <p>Delivering quality weighing solutions across Kenya.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <p>Services</p>
+            <p>About</p>
+            <p>FAQ</p>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Nairobi, Kenya</p>
+            <p>+254 712 244 184</p>
+            <p>everlastscales@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="bottom-bar">
+        © 2026 Everlast Scales & Electronic Services Ltd.
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+          </html>
